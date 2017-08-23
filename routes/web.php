@@ -37,6 +37,4 @@ Route::group(['prefix' => 'blog', 'as' => 'blog.'], function() {
 	Route::get('/', 'PostController@index')->name('index');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@welcome')->name('homepage');
