@@ -4,9 +4,9 @@
 		<!-- Logo -->
 		<a href="index2.html" class="logo">
 		<!-- mini logo for sidebar mini 50x50 pixels -->
-		<span class="logo-mini"><b>G</b>ST</span>
+		<span class="logo-mini">ADM</span>
 		<!-- logo for regular state and mobile devices -->
-		<span class="logo-lg"><b>Admin</b></span>
+		<span class="logo-lg"><b>{{ config('app.name', 'Laravel Simple CMS') }}</b></span>
 		</a>
 		<!-- Header Navbar: style can be found in header.less -->
 		@include('admin.partials.nav')

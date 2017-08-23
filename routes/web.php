@@ -13,7 +13,7 @@
 
 
 Auth::routes();
-Route::get('/logout', 'Auth\LoginController@logout');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'], 'as'=>'admin.'], function() {
 	Route::get('/', 'AdminController@index')->name('dashboard');
