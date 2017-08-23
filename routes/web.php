@@ -30,8 +30,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'], 'as'=
 	});
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::group(['prefix' => 'blog', 'as' => 'blog.'], function() {
 	Route::get('/{slug}', 'PostController@show')->name('post');
 	Route::get('/', 'PostController@index')->name('index');
