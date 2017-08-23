@@ -24,8 +24,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'], 'as'=
 		Route::get('/{type?}', 'CategoryController@adminIndex')->name('index');
 	});
 	Route::group(['prefix' => 'posts', 'as' => 'posts.'], function() {
-		Route::get('/edit/{id}', 'PostController@edit')->name('edit');
-		Route::post('/edit/{id}', 'PostController@update');
+		Route::post('/create', 'PostController@create');
+		Route::post('/{id}/edit', 'PostController@update')->name('edit');
+		Route::post('/{id}/edit', 'PostController@update');
 		Route::get('/{type?}', 'PostController@adminIndex')->name('index');
 	});
 });
