@@ -36,4 +36,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function redirectTo()
+    {
+    	if($this->guard()->user()->hasRole('admin'))
+    		return route('admin.dashboard');
+
+    	return $this->redirectTo;
+    }
 }
