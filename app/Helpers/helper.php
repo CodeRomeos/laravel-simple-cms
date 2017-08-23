@@ -1,6 +1,6 @@
 <?php
 
-function app_name()
+function appName()
 {
 	return config('app.name', 'Laravel Simple CMS');
 }

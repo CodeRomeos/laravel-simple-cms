@@ -47,7 +47,7 @@
         <li class="{{ Request::url() == route('admin.categories.index', 'create') ? 'active' : '' }}"><a href="{{ route('admin.categories.index', 'create') }}"><i class="fa fa-circle-o"></i> Create Category</a></li>
       </ul>
     </li>
-    <li class="treeview">
+    <li class="treeview {{ Request::url() == route('admin.posts.index') || Request::url() == route('admin.posts.index', 'create') ? 'active' : '' }}">
       <a href="#">
         <i class="fa fa-book"></i>
         <span>Posts</span>
@@ -56,8 +56,8 @@
         </span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="#"><i class="fa fa-circle-o"></i> All Posts</a></li>
-        <li><a href="#"><i class="fa fa-circle-o"></i> Create Post</a></li>
+        <li class="{{ Request::url() == route('admin.posts.index') ? 'active' : '' }}"><a href="{{ route('admin.posts.index') }}"><i class="fa fa-circle-o"></i> All Posts</a></li>
+        <li class="{{ Request::url() == route('admin.posts.index', 'create') ? 'active' : '' }}"><a href="{{ route('admin.posts.index','create') }}"><i class="fa fa-circle-o"></i> Create Post</a></li>
       </ul>
     </li>
   </ul>
