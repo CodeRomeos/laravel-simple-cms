@@ -1,0 +1,23 @@
+body {
+	padding-top: 50px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.text-white {
+	color: #FFF;
+}
+
+.text-black {
+	color: #000;
+}
+
+.homepage .jumbotron.banner {
+	background-color: #FF5722;
+}
+.homepage .jumbotron.banner a:hover {
+	color: #e8e8e8;
+}
+
+.homepage .jumbotron.banner p {
+	color: #e8e8e8;
+}
