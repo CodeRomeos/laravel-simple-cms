@@ -4,6 +4,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
+			<h2>Blog</h2>
 			@foreach($posts as $post)
 			<div class="panel panel-default">
 				<div class="panel-body">

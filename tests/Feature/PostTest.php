@@ -10,12 +10,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class PostTest extends TestCase
 {
-	use DatabaseMigrations, DatabaseTransactions;
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
+	use DatabaseTransactions, DatabaseMigrations;
+
     public function testPublishedBlogPostListing()
     {
     	$this->get('/blog')
