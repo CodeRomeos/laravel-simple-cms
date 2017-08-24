@@ -32,5 +32,12 @@ class RolesTableSeeder extends Seeder
         	'title' => 'Customer',
         	'description' => 'Customer Role'
         ]);
+
+        DB::table('roles')->insert([
+            'id' => '4',
+            'name' => 'General',
+            'title' => 'general',
+            'description' => 'General User Role'
+        ]);
     }
 }

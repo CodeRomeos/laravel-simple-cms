@@ -15,3 +15,8 @@ function dashboardRoute()
 
 	return route('user.dashboard');
 }
+
+function generateVerificationCode()
+{
+	return sha1(md5(uniqid()));
+}
