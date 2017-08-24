@@ -42,6 +42,11 @@ class Post extends Model
     	return $q->ofType('page');
     }
 
+    public function scopePublished($q)
+    {
+        return $q->where('published_at' , '<=', \Carbon\Carbon::now());
+    }
+
     public function getIsPageAttribute()
     {
     	return !! ($this->type == 'page');
