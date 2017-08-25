@@ -8,6 +8,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class VarificationCodeTest extends TestCase
 {
+    use DatabaseTransactions, DatabaseMigrations;
     /**
      * A basic test example.
      *
@@ -15,7 +16,6 @@ class VarificationCodeTest extends TestCase
      */
     public function testVarificationCodeCanBeGenerated()
     {
-    	$generatedCode = generateVerificationCode();
-        $this->assertTrue(true);
+        $this->assertTrue(!! generateVerificationCode());
     }
 }

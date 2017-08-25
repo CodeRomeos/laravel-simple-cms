@@ -41,8 +41,8 @@ $factory->define(Post::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->defineAs(User::class, 'superadmin', function (Faker\Generator $faker) {
+$factory->defineAs(User::class, 'superadmin', function (Faker\Generator $faker) use($factory) {
     $user = $factory->raw(App\User::class);
 
-    return array_merge($user, ['role_id' => 1, 'is_super_admin' => true]);
+    return array_merge($user, ['id' => 1, 'email' => 'admin@admin.com', 'role_id' => 1, 'is_super_admin' => true]);
 });
