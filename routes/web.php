@@ -29,6 +29,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'role:admin'], 'as'=
 		Route::post('/{id}/edit', 'PostController@update');
 		Route::get('/{type?}', 'PostController@adminIndex')->name('index');
 	});
+	Route::group(['prefix' => 'pages', 'as' => 'pages.'], function() {
+		Route::post('/create', 'PageController@create');
+		Route::post('/{id}/edit', 'PageController@update')->name('edit');
+		Route::post('/{id}/edit', 'PageController@update');
+		Route::get('/{type?}', 'PageController@adminIndex')->name('index');
+	});
 });
 
 Route::group(['prefix' => 'blog', 'as' => 'blog.'], function() {
